@@ -1,5 +1,10 @@
 # BadPack
 
+Note: this is an experiment and is still in development.
+API is extremely volatile; also I may end up dumping this.
+
+---
+
 BadPack is an opinionated admin panel for Laravel.
 It allows you to build powerful admin panels **very fast**.
 
