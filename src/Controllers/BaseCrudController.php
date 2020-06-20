@@ -1,6 +1,6 @@
 <?php
 
-namespace SergeYugai\Laravel\BadPack;
+namespace SergeYugai\Laravel\BadPack\Controllers;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -20,12 +20,12 @@ class BaseCrudController extends CrudController
     use DeleteOperation;
     use ShowOperation;
 
-    protected ?string $model; // model class FQDN
-    protected ?string $route; // use this shortcut if you want your path to start with backpack route prefix
-    protected ?string $absoluteRoute; // use this to specify entire path yourself
-    protected ?array $entitySingularPlural; // use this to provide singular and plural as array
-    protected ?string $entitySingular; // use this to provide singular
-    protected ?string $entityPlural; // use this to provide plural; if null, its guesses from entitySingular
+    protected ?string $model = null; // model class FQDN
+    protected ?string $route = null; // use this shortcut if you want your path to start with backpack route prefix
+    protected ?string $absoluteRoute = null; // use this to specify entire path yourself
+    protected ?array $entitySingularPlural = null; // use this to provide singular and plural as array
+    protected ?string $entitySingular = null; // use this to provide singular
+    protected ?string $entityPlural = null; // use this to provide plural; if null, its guesses from entitySingular
 
     public function setup()
     {
