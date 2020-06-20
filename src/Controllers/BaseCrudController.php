@@ -1,6 +1,6 @@
 <?php
 
-namespace SergeYugai\Laravel\BadPack\Controllers;
+namespace SergeYugai\Laravel\Badpack\Controllers;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -53,5 +53,10 @@ class BaseCrudController extends CrudController
             $plural = Str::plural($singular);
             $this->crud->setEntityNameStrings($singular, $plural);
         }
+    }
+
+    public function setupCreateOperation(): void
+    {
+        $this->crud->setCreateView('badpack::create');
     }
 }

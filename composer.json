@@ -26,15 +26,22 @@
     },
     "autoload": {
         "psr-4": {
-            "SergeYugai\\Laravel\\BadPack\\": "src"
+            "SergeYugai\\Laravel\\Badpack\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SergeYugai\\Laravel\\BadPack\\": "src",
+            "SergeYugai\\Laravel\\Badpack\\": "src",
             "Backpack\\CRUD\\Tests\\": "vendor/backpack/crud/tests",
             "Tests\\": "tests"
         },
         "files": ["vendor/backpack/crud/src/helpers.php"]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SergeYugai\\Laravel\\Badpack\\BadpackServiceProvider"
+            ]
+        }
     }
 }
